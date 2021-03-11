@@ -2,8 +2,7 @@ version: "3.8"
 
 services:
   web:
-    # I'm not push appbase image yet. So I use manual build image
-    image: "dockerapp:lastest"
+    build: ./backend
     mem_limit: "1G"
     restart: "always"
     volumes:

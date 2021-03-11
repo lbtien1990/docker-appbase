@@ -12,15 +12,8 @@
   ```
 
 - Step 2:
-
-  - Build the Dockerfile in folder backend with `image name`. Here I use `dockerapp`.
-
-  ```bash
-  docker build --rm -f "backend/Dockerfile" -t dockerapp:lastest "."
-  ```
-
-- Step 3:
-  - After build success rebuild whole project by run
+  - Modify `COMPOSE_PROJECT_NAME` in `.env` file by template `app_name_`
+  - Rebuild whole project by run
   ```bash
   docker-compose up --build
   ```
