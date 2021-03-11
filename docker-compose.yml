@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  web:
+    # I'm not push appbase image yet. So I use manual build image
+    image: "dockerapp:lastest"
+    mem_limit: "1G"
+    restart: "always"
+    volumes:
+      - ./backend:/app
+      - ./frontend/build:/app/public
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    links:
+      - redis
+
+  redis:
+    image: "redis:alpine"
+    restart: "always"
+    volumes:
+      - ./mounted-data/redis/data:/data
+    mem_limit: "1G"
