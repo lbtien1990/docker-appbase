@@ -1,6 +1,7 @@
 ### Server config instruction
 
-- This project run with Docker. If Docker not installed yet. Please follow instruction at [install docker]()
+- This project run with Docker. If Docker not installed yet. Please follow instruction at [install docker](https://docs.docker.com/get-docker/)
+- Make sure we had stop current project by `docker-compose down` before pull repo or update content.
 
 - Step 1:
 
