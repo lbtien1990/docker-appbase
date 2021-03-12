@@ -17,7 +17,7 @@ const app = express();
 app.disable("x-powered-by");
 
 // Static assets
-app.use("/", express.static(path.join(__dirname, "public/")));
+app.use("/", express.static(path.join(__dirname, "../public/")));
 
 app.get("/visited", (req, res) => {
   client.incr("visit", (err, times) => {

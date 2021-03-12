@@ -4,8 +4,10 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
+COPY package.json .
+
 RUN npm install --production
 
 EXPOSE 5000
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]

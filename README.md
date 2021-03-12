@@ -5,7 +5,12 @@
 
 - Step 1:
 
-  - Build frontend first
+  - Build frontend. Require NodeJS
+
+  ```bash
+  cd frontend && npm install
+  ```
+
   - Make sure we have a build in `frontend/build`
 
   ```bash

@@ -6,7 +6,7 @@ services:
     mem_limit: "1G"
     restart: "always"
     volumes:
-      - ./backend:/app
+      - ./backend/src:/app/src
       - ./frontend/build:/app/public
     ports:
       - "5000:5000"
